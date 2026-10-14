@@ -63,7 +63,7 @@ module.exports = async (req, res) => {
   try {
     await transporter.sendMail({
       from: `"Website Discovery" <${process.env.SMTP_USER}>`,
-      to: 'ideperalta@officite.com', // Replace with the destination delegated address
+      to: 'production@officite.com', // Replace with the destination delegated address
       replyTo: data.doctorEmail || process.env.SMTP_USER,
       subject: subject,
       text: plainTextBody, // Consumed by Salesforce triggers
